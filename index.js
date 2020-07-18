@@ -33,7 +33,7 @@ io.sockets.on("error",e => {
 	console.groupEnd()
 })
 
-server.listen(port, () => {
+server.listen(process.env.PORT || 3000, () => {
 	console.group("Server")
 	console.log("Listening on port:", port)
 	console.log("Hosting: ", public_dir)
